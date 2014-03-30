@@ -59,7 +59,7 @@
 				<div class="row-main">
 					<div class="col col-h-1 grid-h">
 						<p class="center">
-							<a href="https://casadocodigo.refersion.com/l/b84.1397">
+							<a href="https://casadocodigo.refersion.com/l/b84.1397" class="buy" id="buy-header-img">
 								<img src="img/capa-livro-devops.jpg" alt="Livro Devops na Prática" width="350" height="494" />
 							</a>
 						</p>
@@ -71,7 +71,7 @@
 							<p class="desc">Neste livro, mostramos como implementar práticas de DevOps e Entrega Contínua para aumentar a frequência de deploys na sua empresa, ao mesmo tempo aumentando a estabilidade e robustez do sistema em produção.</p>
 							<p class="name">Danilo Sato</p>
 						</blockquote>
-						<a href="https://casadocodigo.refersion.com/l/b84.1397" class="btn thickbox">
+						<a href="https://casadocodigo.refersion.com/l/b84.1397" class="btn thickbox buy" id="buy-header-btn">
 							<span><span class="underline">Compre</span> o livro</span>
 						</a>
 
@@ -338,12 +338,12 @@
 			<div class="box-btn">
 				<div class="row-main">
 					<p class="r">
-						<a href="https://casadocodigo.refersion.com/l/b84.1397">
+						<a href="https://casadocodigo.refersion.com/l/b84.1397" class="buy" id="buy-footer-img">
 							<img src="img/capa-livro-devops.jpg" alt="Livro Devops na Prática" width="250" height="353" />
 						</a>
 					</p>
 					<div class="ctx">
-						<a href="https://casadocodigo.refersion.com/l/b84.1397" class="btn thickbox">
+						<a href="https://casadocodigo.refersion.com/l/b84.1397" class="btn thickbox buy" id="buy-footer-btn">
 							<span><span class="underline">Compre</span> o livro na Casa do Código</span>
 						</a>
 						<p>Também disponível em formatos PDF, MOBI e EPUB</p>
@@ -399,5 +399,21 @@
 		  fjs.parentNode.insertBefore(js, fjs);
 		}(document, 'script', 'facebook-jssdk'));</script>
 		<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+		<script type="text/javascript">
+			(function() {
+				var buyLinks = document.getElementsByClassName('buy');
+				var length = buyLinks.length;
+				for (var i = 0; i < length; i++) {
+					addListener(buyLinks[i], 'click', function() {
+					  ga('send', 'event', 'button', 'click', this.getAttribute('id'));
+					});
+				}
+			})();
+
+			function addListener(element, type, callback) {
+			 if (element.addEventListener) element.addEventListener(type, callback);
+			 else if (element.attachEvent) element.attachEvent('on' + type, callback);
+			}
+		</script>
 	</body>
 </html>
