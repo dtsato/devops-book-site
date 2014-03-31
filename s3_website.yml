@@ -24,7 +24,6 @@ exclude_from_upload:
   - .git
   - .env
   - .DS_Store
-	- tmp
   - .bundle
 
 cloudfront_distribution_id: <%= ENV['AWS_CLOUDFRONT_DISTRIBUTION'] %>
